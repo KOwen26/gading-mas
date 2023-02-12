@@ -109,6 +109,7 @@ class ProcurementsController extends Controller
             $procurement_detail->procurement_id = $id;
             $procurement_detail->product_id = $request->product_id[$i];
             $procurement_detail->product_name = $product->product_name;
+            $procurement_detail->product_unit = $product->product_unit;
             $procurement_detail->product_quantity = $request->product_quantity[$i];
             $procurement_detail->product_price = $request->product_price[$i];
             $procurement_detail->save();
@@ -224,6 +225,7 @@ class ProcurementsController extends Controller
                 $procurement_detail->procurement_id = $request->procurement_id;
                 $procurement_detail->product_id = $request->product_id[$i];
                 $procurement_detail->product_name = $product->product_name;
+                $procurement_detail->product_unit = $product->product_unit;
                 $procurement_detail->product_quantity = $request->product_quantity[$i];
                 $procurement_detail->product_price = $request->product_price[$i];
                 $procurement_detail->save();

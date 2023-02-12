@@ -104,6 +104,7 @@ class TransactionsController extends Controller
             $transaction_detail->transaction_id = $id;
             $transaction_detail->product_id = $request->product_id[$i];
             $transaction_detail->product_name = $product->product_name;
+            $transaction_detail->product_unit = $product->product_unit;
             $transaction_detail->product_quantity = $request->product_quantity[$i];
             $transaction_detail->product_price = $request->product_price[$i];
             $transaction_detail->save();
@@ -225,6 +226,7 @@ class TransactionsController extends Controller
                 $transaction_detail->transaction_id = $request->transaction_id;
                 $transaction_detail->product_id = $request->product_id[$i];
                 $transaction_detail->product_name = $product->product_name;
+                $transaction_detail->product_unit = $product->product_unit;
                 $transaction_detail->product_quantity = $request->product_quantity[$i];
                 $transaction_detail->product_price = $request->product_price[$i];
                 $transaction_detail->save();
