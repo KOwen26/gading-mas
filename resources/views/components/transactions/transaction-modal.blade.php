@@ -2,8 +2,8 @@
 if ($route == 'transaction.update') {
 $id = ['id' => $transaction->transaction_id];
 }
-$statuses = [['NEW', 'Baru'], ['FINISHED', 'Selesai']];
-$payment_status = [['PAID', 'Sudah Lunas'], ['UNPAID', 'Belum Dibayar']];
+$statuses = [['NEW', 'Baru'], ['PROCESSING', 'Diproses'], ['FINISHED', 'Selesai']];
+$payment_status = [['PAID', 'Sudah Lunas'], ['INSTALLMENT', 'Dicicil'], ['UNPAID', 'Belum Dibayar']];
 @endphp
 
 <form method="POST" action="{{ route($route, $id) }}">

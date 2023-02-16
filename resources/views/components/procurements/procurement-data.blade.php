@@ -38,10 +38,10 @@
                     {{ number_format($procurement->procurement_grand_total ?? 0, '0', '0', '.') }}</td>
                 <td>
                     <span class="badge
-                    @if ($procurement?->procurement_status == 'FINISHED') bg-success @else bg-info @endif ">{{
+                    @if ($procurement?->procurement_status == 'FINISHED') bg-success @elseif($procurement?->procurement_status == 'PROCESSING') bg-warning @else bg-info @endif ">{{
                         $procurement?->procurement_status }}</span>
                     <span
-                        class=" badge @if ($procurement?->payment_status == 'PAID') bg-success @else bg-danger @endif ">{{
+                        class=" badge @if ($procurement?->payment_status == 'PAID') bg-success  @elseif($procurement?->payment_status == 'INSTALLMENT') bg-warning @else bg-danger @endif ">{{
                         $procurement?->payment_status }}</span>
                 </td>
                 <td class="">

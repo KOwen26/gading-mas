@@ -38,10 +38,10 @@
                     {{ number_format($transaction->transaction_grand_total ?? 0, '0', '0', '.') }}</td>
                 <td>
                     <span class="badge
-                    @if ($transaction?->transaction_status == 'FINISHED') bg-success @else bg-info @endif ">{{
+                    @if ($transaction?->transaction_status == 'FINISHED') bg-success @elseif($transaction?->transaction_status == 'PROCESSING') bg-warning @else bg-info @endif ">{{
                         $transaction?->transaction_status }}</span>
                     <span
-                        class=" badge @if ($transaction?->payment_status == 'PAID') bg-success @else bg-danger @endif ">{{
+                        class=" badge @if ($transaction?->payment_status == 'PAID') bg-success @elseif($transaction?->payment_status == 'INSTALLMENT') bg-warning @else bg-danger @endif ">{{
                         $transaction?->payment_status }}</span>
                 </td>
                 <td class="">
