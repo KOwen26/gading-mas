@@ -118,12 +118,13 @@
                             <tr>
                                 <th> {{ $loop->iteration }}. </th>
                                 <td> {{ $procurement_detail?->product_name }} </td>
-                                <td class="text-center">{{ $procurement_detail?->product_quantity }}
+                                <td class="text-center font-monospace fs-6">
+                                    {{ $procurement_detail?->product_quantity }}
                                     {{ $procurement_detail?->product_unit ?: 'pcs' }}</td>
-                                <td class="text-end"> Rp
+                                <td class="text-end font-monospace fs-6"> Rp
                                     {{ number_format($procurement_detail?->product_price, '0', '0', '.') }}
                                 </td>
-                                <td class="text-end"> Rp
+                                <td class="text-end font-monospace fs-6"> Rp
                                     {{ number_format($procurement_detail?->product_quantity * $procurement_detail?->product_price, '0', '0', '.') }}
                                 </td>
                             </tr>
@@ -159,7 +160,7 @@
                 </p>
             </div>
             <div class="col-6">
-                <p class="float-end text-end" style="line-height: 150%;">
+                <p class="float-end text-end font-monospace fs-6" style="line-height: 150%;">
                     <span> Total Penjualan :</span>
                     <span class="d-inline-block" style="min-width:120px;">Rp
                         {{ number_format($procurement?->procurement_total, '0', '0', '.') }}</span>
