@@ -39,12 +39,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::controller(ProductsController::class)->name('product')->group(function () {
+        Route::middleware(['isOwner'])->group(function () {
         Route::get('/product', 'index');
         Route::post('/product/create', 'store')->name('.create');
         Route::get('/product/details/{id}', 'edit')->name('.details');
         Route::get('/product/movement/{id}', 'movement')->name('.movement');
         Route::put('/product/update/{id}', 'update')->name('.update');
-        Route::middleware(['isOwner'])->group(function () {
             Route::get('/product/delete', 'delete')->name('.delete');
             Route::delete('/product/delete/{id}', 'destroy')->name('.destroy');
         });

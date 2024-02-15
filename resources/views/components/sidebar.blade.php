@@ -60,6 +60,7 @@ $route = Route::currentRouteName();
                         @endif
                     </ul>
                 </li>
+                @if (auth()->user()->user_type==='OWNER')
                 <li class="sidebar-item ">
                     <a href="{{ route('product') }}" class="sidebar-link  @if ($route === 'product') text-primary
                         @endif">
@@ -67,6 +68,7 @@ $route = Route::currentRouteName();
                         <span>Produk</span>
                     </a>
                 </li>
+                @endif
                 <li class="sidebar-item  ">
                     <a href="{{ route('customer') }}" class="sidebar-link  @if ($route === 'customer') text-primary
                         @endif">

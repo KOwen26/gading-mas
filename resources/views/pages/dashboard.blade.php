@@ -42,6 +42,7 @@
                             </div>
                         </div>
                     </div>
+                    @if (auth()->user()->user_type==='OWNER')
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
@@ -63,6 +64,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
@@ -83,6 +85,7 @@
                             </div>
                         </div>
                     </div>
+                     @if (auth()->user()->user_type==='OWNER')
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
@@ -104,6 +107,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
             <div class="col-md-4">
@@ -119,10 +123,12 @@
                                 class="btn btn-secondary">
                                 {{-- <i class="fas fa-plus"></i> --}}
                                 Tambah Pembelian</button>
+                            @if (auth()->user()->user_type==='OWNER')
                             <button type="button" data-bs-toggle="modal" data-bs-target="#product-detail"
                                 class="btn btn-success">
                                 {{-- <i class="fas fa-plus"></i> --}}
                                 Tambah Produk</button>
+                            @endif
                             <button type="button" data-bs-toggle="modal" data-bs-target="#customer-detail"
                                 class="btn btn-info">
                                 {{-- <i class="fas fa-plus"></i> --}}

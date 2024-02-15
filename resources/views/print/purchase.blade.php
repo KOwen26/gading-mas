@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gading Mas Unggul - {{ $procurement?->procurement_id }}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Azeret+Mono:wght@100;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -118,13 +118,12 @@
                             <tr>
                                 <th> {{ $loop->iteration }}. </th>
                                 <td> {{ $procurement_detail?->product_name }} </td>
-                                <td class="text-center font-monospace fs-6">
-                                    {{ $procurement_detail?->product_quantity }}
+                                <td class="text-center fs-6" style="font-family: 'Azeret Mono', monospace;">{{ $procurement_detail?->product_quantity }}
                                     {{ $procurement_detail?->product_unit ?: 'pcs' }}</td>
-                                <td class="text-end font-monospace fs-6"> Rp
+                                <td class="text-end fs-6" style="font-family: 'Azeret Mono', monospace;"> Rp
                                     {{ number_format($procurement_detail?->product_price, '0', '0', '.') }}
                                 </td>
-                                <td class="text-end font-monospace fs-6"> Rp
+                                <td class="text-end fs-6" style="font-family: 'Azeret Mono', monospace;"> Rp
                                     {{ number_format($procurement_detail?->product_quantity * $procurement_detail?->product_price, '0', '0', '.') }}
                                 </td>
                             </tr>
@@ -160,7 +159,7 @@
                 </p>
             </div>
             <div class="col-6">
-                <p class="float-end text-end font-monospace fs-6" style="line-height: 150%;">
+                <p class="float-end text-end fs-6" style="line-height: 150%; font-family: 'Azeret Mono', monospace;">
                     <span> Total Penjualan :</span>
                     <span class="d-inline-block" style="min-width:120px;">Rp
                         {{ number_format($procurement?->procurement_total, '0', '0', '.') }}</span>

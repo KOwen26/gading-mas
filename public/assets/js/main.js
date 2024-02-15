@@ -39,13 +39,13 @@ document.querySelector('.sidebar-hide').addEventListener('click', () => {
 })
 
 
-// // Perfect Scrollbar Init
-// if(typeof PerfectScrollbar == 'function') {
-//     const container = document.querySelector(".sidebar-wrapper");
-//     const ps = new PerfectScrollbar(container, {
-//         wheelPropagation: false
-//     });
-// }
+// Perfect Scrollbar Init
+if(typeof PerfectScrollbar == 'function') {
+    const container = document.querySelector(".sidebar-wrapper");
+    const ps = new PerfectScrollbar(container, {
+        wheelPropagation: false
+    });
+}
 
-// // Scroll into active sidebar
-// document.querySelector('.sidebar-item.active').scrollIntoView(false)
+// Scroll into active sidebar
+document.querySelector('.sidebar-item.active').scrollIntoView(false)
