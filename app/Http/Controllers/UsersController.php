@@ -23,7 +23,7 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -34,7 +34,7 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         //
     }
@@ -45,7 +45,7 @@ class UsersController extends Controller
      * @param  \App\Models\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(Users $users)
+    public function show(Users $users): void
     {
         //
     }
@@ -106,7 +106,7 @@ class UsersController extends Controller
      * @param  \App\Models\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Users $users)
+    public function destroy(Users $users): void
     {
         //
     }

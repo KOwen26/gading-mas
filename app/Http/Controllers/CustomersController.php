@@ -32,7 +32,7 @@ class CustomersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -72,7 +72,7 @@ class CustomersController extends Controller
      * @param  \App\Models\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function show(Customers $customers)
+    public function show(Customers $customers): void
     {
         //
     }

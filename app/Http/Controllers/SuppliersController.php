@@ -31,7 +31,7 @@ class SuppliersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -72,7 +72,7 @@ class SuppliersController extends Controller
      * @param  \App\Models\Suppliers  $suppliers
      * @return \Illuminate\Http\Response
      */
-    public function show(Suppliers $suppliers)
+    public function show(Suppliers $suppliers): void
     {
         //
     }

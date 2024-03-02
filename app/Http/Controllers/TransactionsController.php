@@ -35,7 +35,7 @@ class TransactionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -55,7 +55,7 @@ class TransactionsController extends Controller
         return $id;
     }
 
-    public function setAudit($transaction_id)
+    public function setAudit($transaction_id): void
     {
         $this->deleteAudit($transaction_id);
         $audit_index = $this->setAuditIndex();
@@ -64,7 +64,7 @@ class TransactionsController extends Controller
         ProductsController::setAudit();
     }
 
-    public function deleteAudit($transaction_id)
+    public function deleteAudit($transaction_id): void
     {
         DB::delete('delete from audit_transactions where transaction_id = ?', [$transaction_id]);
         DB::delete('delete from audit_transaction_details where transaction_id = ?', [$transaction_id]);
@@ -154,7 +154,7 @@ class TransactionsController extends Controller
      * @param  \App\Models\Transactions  $transactions
      * @return \Illuminate\Http\Response
      */
-    public function show(Transactions $transactions)
+    public function show(Transactions $transactions): void
     {
         //
     }

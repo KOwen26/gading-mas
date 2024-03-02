@@ -12,7 +12,7 @@ class ProcurementDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): void
     {
         //
     }
@@ -22,7 +22,7 @@ class ProcurementDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -33,7 +33,7 @@ class ProcurementDetailsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         //
     }
@@ -44,7 +44,7 @@ class ProcurementDetailsController extends Controller
      * @param  \App\Models\ProcurementDetails  $procurementDetails
      * @return \Illuminate\Http\Response
      */
-    public function show(ProcurementDetails $procurementDetails)
+    public function show(ProcurementDetails $procurementDetails): void
     {
         //
     }
@@ -55,7 +55,7 @@ class ProcurementDetailsController extends Controller
      * @param  \App\Models\ProcurementDetails  $procurementDetails
      * @return \Illuminate\Http\Response
      */
-    public function edit(ProcurementDetails $procurementDetails)
+    public function edit(ProcurementDetails $procurementDetails): void
     {
         //
     }
@@ -67,7 +67,7 @@ class ProcurementDetailsController extends Controller
      * @param  \App\Models\ProcurementDetails  $procurementDetails
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProcurementDetails $procurementDetails)
+    public function update(Request $request, ProcurementDetails $procurementDetails): void
     {
         //
     }
@@ -78,7 +78,7 @@ class ProcurementDetailsController extends Controller
      * @param  \App\Models\ProcurementDetails  $procurementDetails
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProcurementDetails $procurementDetails)
+    public function destroy(ProcurementDetails $procurementDetails): void
     {
         //
     }

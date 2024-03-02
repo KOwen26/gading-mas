@@ -30,12 +30,12 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
 
-    public static function setAudit()
+    public static function setAudit(): void
     {
         $product = DB::table('products')->count();
         $audit_product = DB::table('audit_products')->count();
@@ -84,7 +84,7 @@ class ProductsController extends Controller
      * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function show(Products $products)
+    public function show(Products $products): void
     {
         //
     }

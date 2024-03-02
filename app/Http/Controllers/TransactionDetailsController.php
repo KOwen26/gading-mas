@@ -12,7 +12,7 @@ class TransactionDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): void
     {
         //
     }
@@ -22,7 +22,7 @@ class TransactionDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -33,7 +33,7 @@ class TransactionDetailsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         //
     }
@@ -44,7 +44,7 @@ class TransactionDetailsController extends Controller
      * @param  \App\Models\TransactionDetails  $transactionDetails
      * @return \Illuminate\Http\Response
      */
-    public function show(TransactionDetails $transactionDetails)
+    public function show(TransactionDetails $transactionDetails): void
     {
         //
     }
@@ -55,7 +55,7 @@ class TransactionDetailsController extends Controller
      * @param  \App\Models\TransactionDetails  $transactionDetails
      * @return \Illuminate\Http\Response
      */
-    public function edit(TransactionDetails $transactionDetails)
+    public function edit(TransactionDetails $transactionDetails): void
     {
         //
     }
@@ -67,7 +67,7 @@ class TransactionDetailsController extends Controller
      * @param  \App\Models\TransactionDetails  $transactionDetails
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TransactionDetails $transactionDetails)
+    public function update(Request $request, TransactionDetails $transactionDetails): void
     {
         //
     }
@@ -78,7 +78,7 @@ class TransactionDetailsController extends Controller
      * @param  \App\Models\TransactionDetails  $transactionDetails
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TransactionDetails $transactionDetails)
+    public function destroy(TransactionDetails $transactionDetails): void
     {
         //
     }

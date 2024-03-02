@@ -23,7 +23,7 @@ class CompaniesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -34,7 +34,7 @@ class CompaniesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         //
     }
@@ -45,7 +45,7 @@ class CompaniesController extends Controller
      * @param  \App\Models\Companies  $companies
      * @return \Illuminate\Http\Response
      */
-    public function show(Companies $companies)
+    public function show(Companies $companies): void
     {
         //
     }
@@ -88,7 +88,7 @@ class CompaniesController extends Controller
      * @param  \App\Models\Companies  $companies
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Companies $companies)
+    public function destroy(Companies $companies): void
     {
         //
     }

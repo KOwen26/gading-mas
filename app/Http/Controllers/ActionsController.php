@@ -12,7 +12,7 @@ class ActionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): void
     {
         //
     }
@@ -22,7 +22,7 @@ class ActionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -51,7 +51,7 @@ class ActionsController extends Controller
      * @param  \App\Models\Actions  $actions
      * @return \Illuminate\Http\Response
      */
-    public function show(Actions $actions)
+    public function show(Actions $actions): void
     {
         //
     }
@@ -62,7 +62,7 @@ class ActionsController extends Controller
      * @param  \App\Models\Actions  $actions
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actions $actions)
+    public function edit(Actions $actions): void
     {
         //
     }
@@ -74,7 +74,7 @@ class ActionsController extends Controller
      * @param  \App\Models\Actions  $actions
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actions $actions)
+    public function update(Request $request, Actions $actions): void
     {
         //
     }
@@ -85,7 +85,7 @@ class ActionsController extends Controller
      * @param  \App\Models\Actions  $actions
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actions $actions)
+    public function destroy(Actions $actions): void
     {
         //
     }

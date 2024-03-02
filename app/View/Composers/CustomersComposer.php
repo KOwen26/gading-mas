@@ -10,7 +10,7 @@ class CustomersComposer
     /**
      * @param View $view
      */
-    public function compose(View $view)
+    public function compose(View $view): void
     {
         $view->with('customers', Customers::orderBy('customer_name', 'asc')->get());
     }

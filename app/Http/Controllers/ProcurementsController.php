@@ -38,7 +38,7 @@ class ProcurementsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -58,7 +58,7 @@ class ProcurementsController extends Controller
         return $id;
     }
 
-    public function setAudit($procurement_id)
+    public function setAudit($procurement_id): void
     {
         $this->deleteAudit($procurement_id);
         $audit_index = $this->setAuditIndex();
@@ -67,7 +67,7 @@ class ProcurementsController extends Controller
         ProductsController::setAudit();
     }
 
-    public function deleteAudit($procurement_id)
+    public function deleteAudit($procurement_id): void
     {
         DB::delete('delete from audit_procurements where procurement_id = ?', [$procurement_id]);
         DB::delete('delete from audit_procurement_details where procurement_id = ?', [$procurement_id]);
@@ -159,7 +159,7 @@ class ProcurementsController extends Controller
      * @param  \App\Models\Procurements  $procurements
      * @return \Illuminate\Http\Response
      */
-    public function show(Procurements $procurements)
+    public function show(Procurements $procurements): void
     {
         //
     }
