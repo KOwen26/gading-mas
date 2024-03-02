@@ -66,17 +66,15 @@
                             <div class="col-md-4">
                                 <div class="form-group"><label for="" class="text-bold">Harga Beli
                                     </label>
-                                    <input type="number" name="product_buy_price" step="100" id="product_buy_price"
-                                        min="0" class="form-control" placeholder=""
-                                        value="{{ $product?->product_buy_price }}">
+                                    <input type="number" name="product_buy_price" id="product_buy_price" min="0"
+                                        class="form-control" placeholder="" value="{{ $product?->product_buy_price }}">
                                 </div>
                             </div>
                         @endif
                         <div class="col-md-4">
                             <div class="form-group"><label for="" class="text-bold">Harga Jual</label>
-                                <input type="number" name="product_sell_price" step="100" id="product_sell_price"
-                                    min="0" class="form-control" placeholder=""
-                                    value="{{ $product?->product_sell_price }}">
+                                <input type="number" name="product_sell_price" id="product_sell_price" min="0"
+                                    class="form-control" placeholder="" value="{{ $product?->product_sell_price }}">
                             </div>
                         </div>
                         <div class="col-md-4">
