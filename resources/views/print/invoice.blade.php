@@ -10,7 +10,9 @@
     <title>Gading Mas Unggul - {{ $transaction?->transaction_id }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Azeret+Mono:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Azeret+Mono:wght@100;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -59,6 +61,8 @@
                             </span>
                             <br>
                             <!--{{ $transaction?->Companies?->company_phone }} |-->
+                            No WA : 0851-0171-7276
+                            <br>
                             {{ $transaction?->Companies?->company_email }}
                         </p>
 
@@ -111,12 +115,16 @@
                             <tr>
                                 <th> {{ $loop->iteration }}. </th>
                                 <td> {{ $transaction_detail?->product_name }} </td>
-                                <td class="text-center fs-6" style="font-family: 'Courier Prime', 'Azeret Mono', monospace;"> {{ $transaction_detail?->product_quantity }}
+                                <td class="text-center fs-6"
+                                    style="font-family: 'Courier Prime', 'Azeret Mono', monospace;">
+                                    {{ $transaction_detail?->product_quantity }}
                                     {{ $transaction_detail?->product_unit ?: 'pcs' }} </td>
-                                <td class="text-end fs-6" style="font-family: 'Courier Prime', 'Azeret Mono', monospace;"> Rp
+                                <td class="text-end fs-6"
+                                    style="font-family: 'Courier Prime', 'Azeret Mono', monospace;"> Rp
                                     {{ number_format($transaction_detail?->product_price, '0', '0', '.') }}
                                 </td>
-                                <td class="text-end fs-6" style="font-family: 'Courier Prime', 'Azeret Mono', monospace;"> Rp
+                                <td class="text-end fs-6"
+                                    style="font-family: 'Courier Prime', 'Azeret Mono', monospace;"> Rp
                                     {{ number_format($transaction_detail?->product_quantity * $transaction_detail?->product_price, '0', '0', '.') }}
                                 </td>
                             </tr>
@@ -165,7 +173,8 @@
                 </div>
             </div>
             <div class="col-6">
-                <p class="float-end text-end fs-6" style="line-height: 150%; font-family: 'Courier Prime', 'Azeret Mono', monospace;">
+                <p class="float-end text-end fs-6"
+                    style="line-height: 150%; font-family: 'Courier Prime', 'Azeret Mono', monospace;">
                     <span> Total Penjualan :</span>
                     <span class="d-inline-block" style="min-width:120px;">Rp
                         {{ number_format($transaction?->transaction_total, '0', '0', '.') }}</span>
@@ -178,22 +187,22 @@
                     <span class="d-inline-block" style="min-width:120px;">
                         Rp {{ number_format($transaction?->transaction_tax, '0', '0', '.') }}</span>
                     <br>
-                    <span class="font-bold"> Grand Total : </span> <span class="d-inline-block font-bold"
+                    <span class="font-bold fs-5"> Grand Total : </span> <span class="d-inline-block fs-5"
                         style="min-width:120px;">Rp
                         {{ number_format($transaction?->transaction_grand_total, '0', '0', '.') }}</span>
                     <br>
                     <span class="d-inline-block font-bold mt-2" style="width:400px;">
                         <!--<span class="">Penjual</span>-->
                         <span class="" style="margin-left:100px; margin-right:20px">Hormat Kami</span></span>
-                <!--<div class="row" style="height: 120px;" >-->
-                <!--    <div class="col-6 text-center">Penjual</div>-->
-                <!--    <div class="col-6 text-center">Pembeli</div>-->
-                </div> 
-                </p>
-                <!--<p class="float-end">-->
-                <!--</p>-->
+                    <!--<div class="row" style="height: 120px;" >-->
+                    <!--    <div class="col-6 text-center">Penjual</div>-->
+                    <!--    <div class="col-6 text-center">Pembeli</div>-->
             </div>
+            </p>
+            <!--<p class="float-end">-->
+            <!--</p>-->
         </div>
+    </div>
     </div>
 </body>
 <script src="{{ asset('assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>

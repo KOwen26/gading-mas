@@ -172,8 +172,8 @@
                     <span class="d-inline-block" style="min-width:120px;">
                         Rp {{ number_format($procurement?->procurement_tax, '0', '0', '.') }}</span>
                     <br>
-                    <span class="font-bold"> Grand Total : </span> <span class="d-inline-block font-bold"
-                        style="min-width:120px;">Rp
+                    <span class="font-bold fs-5"> Grand Total : </span> <span class="d-inline-block fs-5"
+                    style="min-width:120px;">Rp
                         {{ number_format($procurement?->procurement_grand_total, '0', '0', '.') }}</span>
                 </p>
             </div>
